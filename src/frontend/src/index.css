@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --font-display: "Space Grotesk";
+    --font-display: "Outfit", sans-serif;
     --font-body: "DM Sans";
     --font-mono: "Geist Mono";
     --radius: 0.5rem;
@@ -105,11 +107,7 @@
   }
 }
 
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
-  font-display: swap;
-}
+/* Space Grotesk removed — replaced by Outfit from Google Fonts */
 
 @font-face {
   font-family: "DM Sans";

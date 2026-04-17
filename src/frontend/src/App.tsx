@@ -1,4 +1,3 @@
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   Outlet,
   RouterProvider,
@@ -8,6 +7,7 @@ import {
 } from "@tanstack/react-router";
 import { Suspense, lazy } from "react";
 import { Layout } from "./components/Layout";
+import { TopProgressBar } from "./components/TopProgressBar";
 
 // Pages
 const HomePage = lazy(() =>
@@ -92,20 +92,10 @@ const FreeITAuditPage = lazy(() =>
   import("./pages/FreeITAudit").then((m) => ({ default: m.FreeITAuditPage })),
 );
 
-function PageLoader() {
-  return (
-    <div className="container py-20 space-y-4">
-      <Skeleton className="h-10 w-1/2" />
-      <Skeleton className="h-5 w-2/3" />
-      <Skeleton className="h-5 w-1/2" />
-    </div>
-  );
-}
-
 const rootRoute = createRootRoute({
   component: () => (
     <Layout>
-      <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<TopProgressBar />}>
         <Outlet />
       </Suspense>
     </Layout>

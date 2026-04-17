@@ -78,13 +78,20 @@ export function HomePage() {
               "url(/assets/generated/hero-it-services.dim_1400x700.jpg)",
           }}
         />
-        <div className="absolute inset-0 bg-primary/82" />
-        {/* Warm amber glow left */}
+        {/* Left-to-right gradient: opaque dark on left (text readable), transparent on right (image shows) */}
         <div
-          className="absolute inset-0 opacity-25 pointer-events-none"
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, oklch(0.18 0.015 230 / 0.92) 0%, oklch(0.18 0.015 230 / 0.75) 40%, oklch(0.18 0.015 230 / 0.3) 65%, transparent 100%)",
+          }}
+        />
+        {/* Decorative accents — subtle */}
+        <div
+          className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 10% 70%, oklch(0.75 0.18 60) 0%, transparent 40%), radial-gradient(ellipse at 80% 20%, oklch(0.55 0.12 200) 0%, transparent 40%)",
+              "radial-gradient(ellipse at 10% 70%, oklch(0.75 0.18 60 / 0.15) 0%, transparent 40%), radial-gradient(ellipse at 80% 20%, oklch(0.55 0.12 200 / 0.15) 0%, transparent 40%)",
           }}
         />
         <div className="container relative z-10 py-24 md:py-32">
