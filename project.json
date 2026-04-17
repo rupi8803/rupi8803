@@ -1,0 +1,28 @@
+{
+  "overview": "A fully functional multi-page marketing website for an IT and web services agency. Features 12+ pages covering web design, IT support, managed services, POS solutions, pricing packages, industry verticals, portfolio, blog, and contact/consultation booking — all with clean professional design, subtle animations, and editable content.",
+  "features": [
+    "12+ page website with navigation and routing",
+    "Service pages for Web Design, IT Support, Managed IT, POS, Backup & Recovery",
+    "Industry-specific pages for Tradies, Retail, Medical, Hospitality",
+    "Pricing and packages comparison tables",
+    "Portfolio and case studies gallery",
+    "Blog and resources section",
+    "Contact form and consultation booking",
+    "FAQ accordion",
+    "Free IT Audit landing page",
+    "Responsive mobile and desktop layout",
+    "Light/dark mode with editable color tokens",
+    "Subtle page transitions and animations"
+  ],
+  "category": "business",
+  "tags": [
+    "website",
+    "it-services",
+    "web-design",
+    "marketing",
+    "multi-page",
+    "professional",
+    "business"
+  ],
+  "last_updated": "2026-04-17T18:04:45.660Z"
+}

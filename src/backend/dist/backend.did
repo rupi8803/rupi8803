@@ -1,0 +1,72 @@
+type Timestamp = int;
+type Result = 
+ variant {
+   err: text;
+   ok: nat;
+ };
+type ITAuditRequestInput = 
+ record {
+   companyName: text;
+   contactName: text;
+   email: text;
+   industry: text;
+   itChallenges: text;
+   phone: text;
+   preferredAuditDate: text;
+ };
+type ITAuditRequest = 
+ record {
+   companyName: text;
+   contactName: text;
+   email: text;
+   id: nat;
+   industry: text;
+   itChallenges: text;
+   phone: text;
+   preferredAuditDate: text;
+   submittedAt: Timestamp;
+ };
+type ContactSubmission = 
+ record {
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   phone: text;
+   serviceInterest: text;
+   submittedAt: Timestamp;
+ };
+type ContactFormInput = 
+ record {
+   email: text;
+   message: text;
+   name: text;
+   phone: text;
+   serviceInterest: text;
+ };
+type ConsultationBookingInput = 
+ record {
+   email: text;
+   name: text;
+   notes: text;
+   phone: text;
+   preferredDateTime: text;
+ };
+type ConsultationBooking = 
+ record {
+   email: text;
+   id: nat;
+   name: text;
+   notes: text;
+   phone: text;
+   preferredDateTime: text;
+   submittedAt: Timestamp;
+ };
+service : {
+  getConsultationBookings: () -> (vec ConsultationBooking) query;
+  getContactSubmissions: () -> (vec ContactSubmission) query;
+  getITAuditRequests: () -> (vec ITAuditRequest) query;
+  submitConsultationBooking: (input: ConsultationBookingInput) -> (Result);
+  submitContactForm: (input: ContactFormInput) -> (Result);
+  submitITAuditRequest: (input: ITAuditRequestInput) -> (Result);
+}

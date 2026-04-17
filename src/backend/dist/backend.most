@@ -1,0 +1,63 @@
+// Version: 1.0.0
+type ConsultationBooking__731588434 =
+  {
+    email : Text;
+    id : Nat;
+    name : Text;
+    notes : Text;
+    phone : Text;
+    preferredDateTime : Text;
+    submittedAt : Timestamp__460331043
+  };
+type ContactSubmission__185949536 =
+  {
+    email : Text;
+    id : Nat;
+    message : Text;
+    name : Text;
+    phone : Text;
+    serviceInterest : Text;
+    submittedAt : Timestamp__460331043
+  };
+type ITAuditRequest__922223182 =
+  {
+    companyName : Text;
+    contactName : Text;
+    email : Text;
+    id : Nat;
+    industry : Text;
+    itChallenges : Text;
+    phone : Text;
+    preferredAuditDate : Text;
+    submittedAt : Timestamp__460331043
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Timestamp__301639476 = Int;
+type Timestamp__460331043 = Timestamp__301639476;
+actor {
+  stable _nextConsultationIdBox : {var val : Nat};
+  stable _nextContactIdBox : {var val : Nat};
+  stable _nextITAuditIdBox : {var val : Nat};
+  stable consultations :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ConsultationBooking__731588434]];
+      var elementIndex : Nat__490723111
+    };
+  stable contacts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__185949536]];
+      var elementIndex : Nat__490723111
+    };
+  stable itAudits :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ITAuditRequest__922223182]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextConsultationId : Nat;
+  stable var nextContactId : Nat;
+  stable var nextITAuditId : Nat
+};
